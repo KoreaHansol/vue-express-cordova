@@ -15,9 +15,9 @@ var http = require('http');
 
  const host2 = '49.167.66.58';
  
- const port2 = 80;
+ const port2 = 777;
  
-var port = normalizePort(host2);
+var port = normalizePort(port2);
 app.set('port', port2);
 
 /**
