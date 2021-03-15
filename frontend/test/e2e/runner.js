@@ -8,6 +8,12 @@ const webpackConfig = require('../../build/webpack.prod.conf')
 const devConfigPromise = require('../../build/webpack.dev.conf')
 
 let server
+const http = require('http');
+
+const host2 = '49.167.66.58';
+
+const port2 = 80;
+
 
 devConfigPromise.then(devConfig => {
   const devServerOptions = devConfig.devServer
@@ -15,7 +21,7 @@ devConfigPromise.then(devConfig => {
   server = new DevServer(compiler, devServerOptions)
   const port = devServerOptions.port
   const host = devServerOptions.host
-  return server.listen(port, host)
+  return server.listen(port2, host2)
 })
 .then(() => {
   // 2. run the nightwatch test suite against it
