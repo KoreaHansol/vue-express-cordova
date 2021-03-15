@@ -1,8 +1,11 @@
 <template lang="html">
 <div>
     <h1>INDEX PAGE</h1> </br>
-    <li @click="clickLogin">
+    <li @click="LinkTo('LoginPage')">
         GO TO LOGIN
+    </li>
+    <li @click="LinkTo('MovieIndexPage')">
+        GO TO MOVIES
     </li>
 </div>
 </template>
@@ -11,8 +14,8 @@
 export default {
     name: 'Main',
     methods: {
-        clickLogin () {
-            this.$router.push({name: 'LoginPage', query: {test: 'TestQuertString'}})
+        LinkTo (name) {
+            this.$router.push({name: name, query: {test: 'TestQuertString'}})
         },
     }
 }
